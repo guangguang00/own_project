@@ -4,8 +4,10 @@ import './css/App.less';
 import {BrowserRouter as Router,Route,Switch,Redirect} from 'react-router-dom'
 import {connect} from 'react-redux'
 import NotFound from './components/notfound'
-import {Button,Input} from 'antd'
+import {Button,Input,Layout} from 'antd'
 import Header from './common/header'
+// import Layout from './common/layout'
+
 class  App extends Component{
   constructor(props){
     super(props)
@@ -15,7 +17,7 @@ class  App extends Component{
     // let token = localStorage.getItem('token')
     return (
       <Router>
-        <div>
+        <div style={{height:'100%'}}>
             <Header />
             <Switch>
               {RouterMap.map((item,index)=>{
@@ -24,7 +26,8 @@ class  App extends Component{
                 }/>
               })}
               <Route component={NotFound}/>
-            </Switch>
+            </Switch> 
+           
            
         </div>
       </Router>

@@ -7,7 +7,7 @@ import {Provider} from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import store from './store/'
 import * as serviceWorker from './serviceWorker';
-
+document.getElementById('root').style.height = '100%'
 const render = Component => {
     ReactDOM.render(
       //绑定redux、热加载

@@ -7,12 +7,12 @@ class Header extends Component {
         return (
             <div className={styles.header}>
                  <Row className={styles.test}>
-                     <Col span={8}>
+                     <Col span={12}>
                         <div className={styles.header_left}>guangguang00的前端日志</div>
                      </Col>
-                     <Col span={8} offset={6}>
-                        <Row>
-                            <Col span={12}>
+                     <Col span={12}>
+                        <Row justify="end" type='flex'>
+                            <Col span={8} md={8} sm={8}>
                                 <div className={styles.search}>
                                     <Search
                                         placeholder="搜索..."
@@ -20,9 +20,8 @@ class Header extends Component {
                                         enterButton
                                     />
                                 </div>
-                               
                             </Col>
-                            <Col>
+                            <Col span={8} md={16} sm={16}>
                                 <ul className={styles.titleList}>
                                     <li><a>博客</a></li>
                                     <li><a>面试题</a></li>
