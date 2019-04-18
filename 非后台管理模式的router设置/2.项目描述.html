@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        1.配置好了antd，实现按需加载antd的组件
+    </div>
+    <div>
+        2.开启css modules模式
+            1> 如果使用sass 需要安装node-sass ,然后文件命名需要设置成 .module.sass或者.module.scss文件
+            2.如果使用less  需要在getStyleLoaders 方法里面设置 module:true   然后命名文件为.module.less 
+    </div>
+    <div>
+        3.less文件引入less文件，最后面一定要加上；否则报错
+            @import './reset.less'；
+    </div>
+</body>
+</html>

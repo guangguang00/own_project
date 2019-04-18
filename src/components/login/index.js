@@ -5,6 +5,8 @@ import {connect} from 'react-redux'
 import {changeToken} from './action'
 import {bindActionCreators} from 'redux'
 import {Link} from 'react-router-dom'
+import { Button } from 'antd';
+console.log(Button)
 class Login extends Component {
     state ={
         username:'',
@@ -45,6 +47,8 @@ class Login extends Component {
                 <button onClick={this.login.bind(this)}>点击登录</button>
                 <br></br>
                 <Link to="/home">进入home</Link>
+                <br />
+                <Button type="primary">Primary</Button>
             </div>
         );
     }
