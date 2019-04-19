@@ -5,6 +5,8 @@ import {  clearData ,receiveData} from './action';
 import testHoc from '../testHoc'
 import testHoc1 from '../testHoc1'
 import Layout from '../../common/layout'
+import {post} from '../../config/fetch'
+import api from '../../config/api'
 // Component 是一个函数
 @testHoc({name:'zhang'})
 @testHoc1
@@ -22,12 +24,13 @@ class Home extends Component {
     }
     //初始化数据，显示所有的商品
     initData = props => {
-        setTimeout(()=>{
-            this.setState({
-                leftData:[{name:'zhang'},{name:'yang'},{name:'wu'},{name:'111111'},{name:'22'},{name:'3'},{name:'444'}],
-                rightData:{age:'199',area:'guanghzhou'}
-            })
-        },2000)
+        
+       post(api.dosummary,{name:'yang',psd:'123456'}).then(res=>{
+           console.log(res)
+           this.setState({
+            leftData:res
+           })
+       })
     }
     componentWillMount(){
         this.initData()

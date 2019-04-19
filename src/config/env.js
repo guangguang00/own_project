@@ -7,10 +7,8 @@
  *
  */
 
-// export const baseUrl = 'http://192.168.11.233:8080'
-// export var baseUrl = 'http://test.yunyinshua.com'  // test
-export var baseUrl = 'http://alpha.yunyinshua.com'  // alpha
-// export const baseUrl = "https://www.yunyinshua.com"  //线上
+
+export var baseUrl = 'http://127.0.0.1:9000'  // alpha
 // export const imgBaseUrl =  'http://192.168.11.169:8001/web/image?model=product.template&field=image_medium&unique=&id='
 export const imgBaseUrl = "https://www.yunyinshua.com/pic/"
 export const exlcusive = "/index.php?controller=goodvue&action=mutex" //互斥选项

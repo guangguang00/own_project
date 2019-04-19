@@ -19,5 +19,23 @@
         3.less文件引入less文件，最后面一定要加上；否则报错
             @import './reset.less'；
     </div>
+    <div>
+        4.nginx 的配置 
+        https://cloud.tencent.com/developer/article/1198752  在nginx.conf下面配置
+        https://cloud.tencent.com/developer/article/1183138  分开配置
+
+        server {  
+            listen 80;
+            server_name cloud.fangyuanxiaozhan.com;
+        
+            location / {
+                proxy_set_header   X-Real-IP $remote_addr;
+                proxy_set_header   Host      $http_host;
+                proxy_pass         http://0.0.0.0:8080;
+            }
+        }
+    //实现了fangyuanxiaozhan.com:8080映射到 cloud.fangyuanxiaozhan.com
+    错误部分在  var/log/nginx  里面，可以查看报错信息
+    </div>
 </body>
 </html>

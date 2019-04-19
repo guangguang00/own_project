@@ -6,13 +6,13 @@ class Header extends Component {
     render() {
         return (
             <div className={styles.header}>
-                 <Row className={styles.test}>
-                     <Col span={12}>
+                 <Row className={styles.test} justify="space-between" type='flex'>
+                     <Col >
                         <div className={styles.header_left}>guangguang00的前端日志</div>
                      </Col>
-                     <Col span={12}>
+                     <Col >
                         <Row justify="end" type='flex'>
-                            <Col span={8} md={8} sm={8}>
+                           
                                 <div className={styles.search}>
                                     <Search
                                         placeholder="搜索..."
@@ -20,15 +20,15 @@ class Header extends Component {
                                         enterButton
                                     />
                                 </div>
-                            </Col>
-                            <Col span={8} md={16} sm={16}>
+                        
+                          
                                 <ul className={styles.titleList}>
                                     <li><a>博客</a></li>
                                     <li><a>面试题</a></li>
                                     <li><a>阅读</a></li>
                                     <li><a>Github <i className='iconfont icon-github'></i></a></li>
                                 </ul>
-                            </Col>
+                         
                         </Row>
                      </Col>
                  </Row>

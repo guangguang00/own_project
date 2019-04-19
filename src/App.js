@@ -17,7 +17,7 @@ class  App extends Component{
     // let token = localStorage.getItem('token')
     return (
       <Router>
-        <div style={{height:'100%'}}>
+        <div style={{height:'100%',display:'flex',justifyContent:'space-between',flexDirection:'column'}}>
             <Header />
             <Switch>
               {RouterMap.map((item,index)=>{

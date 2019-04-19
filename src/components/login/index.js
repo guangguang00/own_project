@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../utils/mock'
+// import '../../utils/mock'
 import axios from 'axios'
 import {connect} from 'react-redux'
 import {changeToken} from './action'

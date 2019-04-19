@@ -7,14 +7,17 @@ class CommonLayout extends Component {
         console.log(this.props)
         return (
                  <Layout style={{height:'100%'}}>
-                    <Sider theme="light">
+                    <Sider theme="dark" style={{overflow:'scroll'}}>
                         <ul className={styles.menulist}>
                             {this.props.menuData&&this.props.menuData.map((item,index)=>{
-                                return (<li key={index}>{item.name}</li>)
+                                return (<li key={index}>{item.username}</li>)
                             })}
                         </ul>
                     </Sider>
-                    <Content>2222</Content>
+                    <Content>
+                        <div style={{height:'900px',border:'1px solid #ccc'}}>111</div>
+                        <div style={{height:'900px',border:'1px solid #ccc'}}>222</div>
+                    </Content>
                 </Layout>  
         )
     }
