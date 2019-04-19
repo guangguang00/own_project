@@ -1,0 +1,21 @@
+{
+  "name": "my-project-koa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-router": "^7.4.0",
+    "koa2-cors": "^2.0.5",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-register": "^6.26.0"
+  }
+}
