@@ -5,6 +5,7 @@ let defaultState = {
   name: 'zhang', //姓名
   phoneNo: '', //手机号
   imgpath: '', //图片地址
+  default:'/home'
 }
 // 首页表单数据
 export const formData = (state = defaultState , action = {}) => {

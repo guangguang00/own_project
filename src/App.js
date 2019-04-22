@@ -35,8 +35,10 @@ class  App extends Component{
   }
 }
 const mapStateToProps = (state,ownProps)=>{
+  console.log(state,'111111111')
   return {
-    token:state.loginStatus.token
+    token:state.loginStatus.token,
+    path:state.formData.default
   }
 }
 export default connect(mapStateToProps)(App)

@@ -78,6 +78,11 @@ let findDataByName = function (  name ) {
         `
     return query( _sql)
   }
+let findBlogContent = function (content){
+    
+    let _sql = `SELECT * from list_detail`
+    return query(_sql)
+}
 // 注册用户
 let insertData = function( value ) {
   let _sql = "insert into users(name,pass) values(?,?);"
@@ -182,5 +187,6 @@ module.exports={
   findCommentLength,
   updatePostComment,
   deleteAllPostComment,
-  updatePostPv
+  updatePostPv,
+  findBlogContent
 }

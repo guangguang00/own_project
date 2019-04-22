@@ -3,6 +3,12 @@ import {Row,Col,Input} from 'antd'
 import styles from './common_css/common_header.module.less'
 const Search = Input.Search
 class Header extends Component {
+    constructor(props){
+        super(props)
+    }
+    componentDidMount(){
+        console.log(this.state,this.props)
+    }
     render() {
         return (
             <div className={styles.header}>

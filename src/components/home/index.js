@@ -8,7 +8,7 @@ import Layout from '../../common/layout'
 import {post} from '../../config/fetch'
 import api from '../../config/api'
 // Component 是一个函数
-@testHoc({name:'zhang'})
+@testHoc({path:'/home'})
 @testHoc1
 class Home extends Component {
     state = {
@@ -25,7 +25,7 @@ class Home extends Component {
     //初始化数据，显示所有的商品
     initData = props => {
         
-       post(api.dosummary,{name:'yang',psd:'123456'}).then(res=>{
+       post(api.blog,{name:'yang',psd:'123456'}).then(res=>{
            console.log(res)
            this.setState({
             leftData:res
@@ -49,7 +49,7 @@ class Home extends Component {
             //     <h1>{this.props.name}</h1>
             //     <h1>{this.props.area}</h1>
             // </div>
-            <Layout menuData={this.state.leftData} content={this.state.rightData} />
+            <Layout menuData={this.state.leftData} content={this.state.rightData} {...this.props}/>
         )
     }
 }

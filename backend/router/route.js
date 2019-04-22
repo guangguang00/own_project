@@ -51,10 +51,17 @@ route.post('/dosummary',async(ctx)=>{
         console.log(2222222222)
         ctx.body = res
       })
-  
+    
+   
     
     
     
+})
+route.post('/blog',async(ctx) => {
+    await ParseReqData(ctx).then(DBquery.findBlogContent).then(res=>{
+        console.log(res,'查询的结果11111111111')
+        ctx.body = res
+    })
 })
 function handleAllPromise(){
 
