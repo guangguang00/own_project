@@ -9,10 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "crypto": "^1.0.1",
     "koa": "^2.5.1",
     "koa-router": "^7.4.0",
     "koa2-cors": "^2.0.5",
-    "mysql": "^2.15.0"
+    "mysql": "^2.15.0",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.7.5"
   },
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.24.1",
