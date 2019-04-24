@@ -37,5 +37,23 @@
     //实现了fangyuanxiaozhan.com:8080映射到 cloud.fangyuanxiaozhan.com
     错误部分在  var/log/nginx  里面，可以查看报错信息
     </div>
+    <div>
+        supervisor管理node项目
+        npm -g install supervisor
+        supervisor server
+    </div>
+    <div>
+        页面加载之前，会首先执行一遍所有绑定了的reducer
+    </div>
+    <div>
+        react里面添加多个类名的方式
+        className = {`${styles.list} active box`}  ===》 采用模板字符串的方式将类名添加上去
+    </div>
+    <div>
+        使用withRouter将router的所有信息绑定在组件的props上
+        import {withRouter} from 'react-router-dom'
+        @withRouter 组件
+        组件内部直接使用this.props就能得到路由信息了
+    </div>
 </body>
 </html>

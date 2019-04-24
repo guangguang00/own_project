@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import {Row,Col,Input} from 'antd'
 import styles from './common_css/common_header.module.less'
+import {withRouter} from 'react-router'
+import {Link} from 'react-router-dom'
 const Search = Input.Search
+@withRouter
 class Header extends Component {
     constructor(props){
         super(props)
@@ -28,11 +31,11 @@ class Header extends Component {
                                 </div>
                         
                           
-                                <ul className={styles.titleList}>
-                                    <li><a>博客</a></li>
-                                    <li><a>面试题</a></li>
-                                    <li><a>阅读</a></li>
-                                    <li><a>Github <i className='iconfont icon-github'></i></a></li>
+                                <ul className={`${styles.titleList}`}>
+                                    <li><a className={this.props.location.pathname == '/home' ? styles.active : null} onClick={()=>{this.props.history.push('/home')}}>博客</a></li>
+                                    <li><a className={this.props.location.pathname == '/login' ? styles.active : null} onClick={()=>{this.props.history.push('/login')}}>面试题</a></li>
+                                    <li><a className={this.props.location.pathname == '/sales' ? styles.active : null}>阅读</a></li>
+                                    <li><a href="https://github.com/guangguang00">Github <i className='iconfont icon-github'></i></a></li>
                                 </ul>
                          
                         </Row>

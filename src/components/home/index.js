@@ -25,8 +25,8 @@ class Home extends Component {
     //初始化数据，显示所有的商品
     initData = props => {
         
-       post(api.blog,{name:'yang',psd:'123456'}).then(res=>{
-           console.log(res)
+       post(api.blog,{name:'yang',psd:'123456',route:'/blog'}).then(res=>{
+           console.log(res,'home请求回来的数据')
            this.setState({
             leftData:res
            })
@@ -43,12 +43,6 @@ class Home extends Component {
     render(){
       
         return(
-            // <div>
-            //     <h1>这是标题</h1>
-            //     <h2>这是内容</h2>
-            //     <h1>{this.props.name}</h1>
-            //     <h1>{this.props.area}</h1>
-            // </div>
             <Layout menuData={this.state.leftData} content={this.state.rightData} {...this.props}/>
         )
     }
@@ -56,7 +50,7 @@ class Home extends Component {
 // export default Home
 //将store里面的state绑定到props里面 ,绑定reducer返回的值
 const mapStateToProps = state => {
-    console.log(state,'home里面的state')
+    console.log(state,'home里面的store的state')
     const {formData,showLoading} = state
     return {formData,showLoading}
 }

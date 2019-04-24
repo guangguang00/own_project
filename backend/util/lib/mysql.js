@@ -80,7 +80,8 @@ let findDataByName = function (  name ) {
   }
 let findBlogContent = function (content){
     
-    let _sql = `SELECT * from list_detail`
+    let _sql = `SELECT * from list_detail WHERE router = '${content.route}'`
+    console.log(_sql)
     return query(_sql)
 }
 // 注册用户

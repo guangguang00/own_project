@@ -2,7 +2,7 @@ import * as types from '@/store/action-type';
 
 export const showLoading = (state = {loading:'加载中'},action) => {
     //这里的action就是action.js里面方法的返回值
-    console.log(action)
+   
     switch(action.type){
         case types.TEST1:
             
