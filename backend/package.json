@@ -15,7 +15,7 @@
     "koa2-cors": "^2.0.5",
     "mysql": "^2.15.0",
     "mysql2": "^1.6.5",
-    "sequelize": "^5.7.5"
+    "sequelize": "^5.15.1"
   },
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.24.1",
